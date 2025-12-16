@@ -1,20 +1,23 @@
 **This project showcases a comprehensive Human Resources (HR) data analysis using Power BI, designed to monitor workforce metrics and provide actionable insights into the core drivers of employee attrition.**
 
-# Project Goals
+## Project Goals
 The primary objectives of this analysis were:
 - Monitor key HR metrics such as total employees, active/inactive counts, and turnover trends.
 - Understand which organizational, demographic, and performance factors have the highest correlation with employee attrition.
 
-# Data Modeling and Preparation
+## Data Modeling and Preparation
 * Source: Data was sourced directly from GitHub using Power BI's Web Connector.
 * Structure: Snowflake schema was implemented using Dim (Dimension) and Fact (Fact) tables, linked by relationships.
 * Key Transformations:
     * Used Power Query to create clear Age Bins for grouping demographic data.
     * A dedicated calculated table (DimDate) was created in DAX to enable sophisticated temporal analysis.
+* All core business logic was consolidated into an organized _Measures table. 
+* Extensive use of CALCULATE and USERELATIONSHIP to manage inactive relationships and calculate metrics based on different date contexts.
 
-All core business logic was consolidated into an organized _Measures table. 
+![WhatsApp Image 2025-12-15 at 5 10 26 PM](https://github.com/user-attachments/assets/ac26bd0d-ac90-47b4-9d6d-7dab54ca64a4)
 
-# Key Business Insights
+
+## Key Business Insights
 - Overall Attrition: The company maintains an overall attrition rate of 16.1%.
 - High-Risk Roles: Attrition is critically high in two specific roles:
   - Sales Representative (39.8% attrition rate) 
